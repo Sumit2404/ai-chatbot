@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sumit's AI Chatbot</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static',filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="main-container">
+
+
+        <div class="page-title">
+
+            <h1>Sumit's AI Chatbot</h1>
+
+            <p>
+                Powered by Python, Flask, llama.cpp and Qwen3
+            </p>
+
+        </div>
+
+
+        <div class="chat-layout">
+
+
+            <!-- Sidebar -->
+
+            <div class="sidebar">
+
+
+                <button id="new-chat-button">
+                    + New Chat
+                </button>
+
+
+                <div class="sidebar-title">
+                    Your Chats
+                </div>
+
+
+                <div
+                    id="chat-list"
+                    class="chat-list"
+                >
+                </div>
+
+
+            </div>
+
+
+            <!-- Main Chat Area -->
+
+            <div class="chat-container">
+
+
+                <div
+                    id="chat-box"
+                    class="chat-box"
+                >
+                </div>
+
+
+                <div class="input-area">
+
+
+                    <input
+                        type="text"
+                        id="message-input"
+                        placeholder="Type your message..."
+                        autocomplete="off"
+                    >
+
+
+                    <!-- Send Button -->
+
+                    <button id="send-button">
+
+                        <span class="button-sign">
+                            ➤
+                        </span>
+
+                        <span class="button-text">
+                            Send
+                        </span>
+
+                    </button>
+
+
+                    <!-- Clear Chat Button -->
+
+                    <button id="clear-button">
+
+                        <span class="button-sign">
+                            🗑
+                        </span>
+
+                        <span class="button-text">
+                            Clear Chat
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static',filename='script.js') }}"
+    >
+    </script>
+
+
+</body>
+
+</html>
